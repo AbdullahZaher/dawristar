@@ -1,0 +1,8 @@
+{
+  "name": "DawristarApp",
+  "app_id": "8b7355bb",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
