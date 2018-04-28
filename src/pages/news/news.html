@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button right menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>اخبار</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="ion-content">
+
+<ion-card *ngFor="let item of items | async">
+  <div *ngIf=item.isShown>
+  <img [src]="item.img"/>
+  <ion-card-content>
+    <ion-card-title class="ion-card-title">
+      {{item.title}}
+    </ion-card-title>
+  <p [innerHTML]="item.desc"></p>
+  <br>
+  </ion-card-content>
+  <div class="card-btn"><button class="button">المزيد</button></div>
+  </div>
+</ion-card>
+
+</ion-content>

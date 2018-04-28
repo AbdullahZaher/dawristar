@@ -9,11 +9,22 @@ $font-path: "../assets/fonts";
 // The app direction is used to include
 // rtl styles in your app. For more info, please see:
 // http://ionicframework.com/docs/theming/rtl-support/
-$app-direction: ltr;
+$app-direction: rtl;
 
 
 @import "ionic.globals";
-
+@font-face {
+  font-family: sukar-Bold;
+  src: url(../assets/fonts/sukar-Bold.ttf);
+}
+@font-face {
+  font-family: sukar-Regular;
+  src: url(../assets/fonts/sukar-Regular.ttf);
+}
+@font-face {
+  font-family: Lateef;
+  src: url(../assets/fonts/Lateef.ttf);
+}
 
 // Shared Variables
 // --------------------------------------------------
@@ -34,11 +45,14 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
-  danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222
+  primary:    #103746,
+  secondary:  #5DA4C0,
+  danger:     #ed1846,
+  light:      #F2F2F2,
+  dark:       #D1E390,
+  dark-grey:  #dadada,
+  body:       #e2dfdf,
+  wc2018:     #a82e43
 );
 
 
@@ -86,3 +100,4 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+

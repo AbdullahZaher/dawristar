@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button right menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>جداول الترتيب</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="ion-content">
+
+  <select class="ion-input-select">
+    <option disabled>اختار الدوري لعرض جدول الترتيب</option>
+    <option value="sa">الدوري السعودي</option>
+    <option value="en">الدوري الانجليزي</option>
+    <option value="sp">الدوري الاسباني</option>
+    <option value="it">الدوري الايطالي</option>
+    <option value="gr">الدوري الالماني</option>
+    <option value="fr">الدوري الفرنسي</option>
+  </select>
+
+  <ion-grid>
+
+    <ion-row>
+      <ion-col class="ion-col-1" col-5>
+        <div class="TableText"> الفريق </div>
+      </ion-col>
+      <ion-col class="ion-col-1">
+        <div class="TableText"> لعب </div>
+      </ion-col>
+      <ion-col class="ion-col-1">
+        <div class="TableText"> فاز </div>
+      </ion-col>
+      <ion-col class="ion-col-1">
+        <div class="TableText"> خسر </div>
+      </ion-col>
+      <ion-col class="ion-col-1">
+        <div class="TableText"> النقاط </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngFor="let view of tables">
+      <ion-col class="ion-col-2" col-5>
+        <div class="TeamsText">{{view.order}} - {{view.team}} </div>
+      </ion-col>
+      <ion-col class="ion-col-2">
+        <div class="TeamsText"> {{view.play}} </div>
+      </ion-col>
+      <ion-col class="ion-col-2">
+        <div class="TeamsText"> {{view.win}} </div>
+      </ion-col>
+      <ion-col class="ion-col-2">
+        <div class="TeamsText"> {{view.lose}} </div>
+      </ion-col>
+      <ion-col class="ion-col-2">
+        <div class="TeamsText"> {{view.poitns}} </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

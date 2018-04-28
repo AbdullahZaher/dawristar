@@ -1,0 +1,80 @@
+page-tables {
+  .ion-content {
+    background-color: color($colors, body);
+  }
+  .icon {
+    color: color($colors, dark);
+  }
+
+  .ion-input-select,
+  select {
+    margin: 0 auto;
+    -webkit-appearance:none;
+    background-repeat: no-repeat;
+    background: color($colors, dark);
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: thin solid color($colors, dark);
+    font-weight:300;
+    display:inline;
+    vertical-align:middle;
+    color:color($colors, danger);
+    padding: 16px 20px;
+    overflow:hidden;
+    box-sizing:border-box;
+  }
+
+  .ion-input-select {
+    width:100%;
+    font-size:1.500rem;
+    text-indent:20px;
+    padding: 16px 20px;
+    direction: rtl;
+    font-family: sukar-Regular;
+  }
+
+  select::-ms-expand {
+      display: none;
+  }
+
+  :focus {
+    outline:none;
+  }
+
+  ion-row {
+    direction: rtl;
+  }
+  .ion-col-1 {
+    background-color:  color($colors, danger);
+    border: 1px solid  color($colors, dark);
+  }
+  .ion-col-2 {
+    background-color:  color($colors, secondary);
+    border: 1px solid  color($colors, dark);
+  }
+
+  .TableText {
+    position: relative;
+    direction: rtl;
+    margin: 0 auto;
+    padding: 2px;
+    text-align: center;
+    font-family: sukar-Regular;
+    font-weight: bold;
+    color: color($colors, light);
+    padding-right: 2px;
+  }
+
+  .TeamsText {
+    position: relative;
+    direction: rtl;
+    margin: 0 auto;
+    padding: 2px;
+    text-align: center;
+    font-family: sukar-Regular;
+    font-weight: bold;
+    color: color($colors, dark);
+    padding-right: 2px;
+  }
+}

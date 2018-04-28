@@ -1,0 +1,97 @@
+page-viewnews {
+  .ion-content {
+    background-color: color($colors, body);
+  }
+  .scroll-bar-indicator{
+    display: none;
+  }
+
+  .backicon {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 30px;
+    font-style: normal;
+    color: color($colors, light);
+  }
+  .post{
+    background-color: #ffffff;
+    margin-bottom: 20px;
+  }
+  img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  h3{
+    padding: 20px 15px 10px 15px;
+    margin: 0 auto;
+    direction: rtl;
+    font-family: sukar-Bold;
+    font-size: 1.800em;
+    color: color($colors, primary);
+  }
+  h4{
+    padding: 20px 20px 10px 10px;
+    margin: 0 auto;
+    direction: rtl;
+    font-family: sukar-Regular;
+    color: color($colors, dark);
+  }
+  h5{
+    padding: 20px 20px 10px 10px;
+    margin: 0 auto;
+    direction: rtl;
+    font-family: sukar-Regular;
+    font-size: 1.200em;
+    color: color($colors, dark);
+  }
+  p{
+    padding: 0px 15px 0px 15px;
+    direction: rtl;
+    font-family: Lateef;
+    font-size: 1.5em;
+  }
+  .detail{
+    direction: rtl;
+    margin: 0 auto;
+    padding: 10px 30px 0px 10px;
+  }
+  .author{
+    font-family: sukar-Regular;
+    font-size: 1.100em;
+    color: color($colors, dark);
+  }
+  .date{
+    font-family: Lateef;
+    font-size: 1.500em;
+    color: color($colors, dark-grey);
+  }
+  .fa-style{
+    padding: 0px 10px 0px 10px;
+    font-size: 4px;
+    color: color($colors, dark-grey);
+  }
+  .tag{
+    direction: rtl;
+    margin: 0 15px 0 0;
+  }
+  .keywords{
+    direction: rtl;
+    display: inline-block;
+    padding: 0 15px 0 15px;
+    margin: 0 5px 10px 0px;
+    background-color: #fff;
+    border: 1px solid color($colors, body);
+    border-radius: 1px;
+    font-family: Lateef;
+    font-size: 1.200em;
+  }
+  .list-header{
+    display: inline-block;
+    direction: rtl;
+    background-color: #fff;
+    width: 100%;
+    border-bottom: 1px solid color($colors, body);
+    font-size: 1.2em;
+  }
+
+}

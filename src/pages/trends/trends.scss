@@ -1,0 +1,14 @@
+page-trends {
+  .icon {
+    color: color($colors, dark);
+  }
+
+  .ion-content {
+    background-color: color($colors, body);
+  }
+
+  .scroll-bar-indicator{
+	  display: none;
+  }
+
+}

@@ -1,0 +1,120 @@
+page-all-matches {
+  .ion-content {
+    background-color: color($colors, body);
+  }
+  .icon {
+    color: color($colors, dark);
+  }
+
+  .ion-input-select,
+  select {
+    margin: 0 auto;
+    -webkit-appearance:none;
+    background-repeat: no-repeat;
+    background: color($colors, dark);
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: thin solid color($colors, dark);
+    font-weight:300;
+    display:inline;
+    vertical-align:middle;
+    color:color($colors, danger);
+    padding: 16px 20px;
+    overflow:hidden;
+    box-sizing:border-box;
+  }
+
+  .ion-input-select {
+    width:100%;
+    font-size:1.500rem;
+    text-indent:20px;
+    padding: 16px 20px;
+    direction: rtl;
+    font-family: sukar-Regular;
+  }
+
+  select::-ms-expand {
+      display: none;
+  }
+
+  :focus {
+    outline:none;
+  }
+
+
+  .DateBox {
+    position: relative;
+    text-align: right;
+    direction: rtl;
+    color: #f2f2f2;
+    background-image: linear-gradient(to right, #a8caba 0%, #103746 100%);
+    padding: 5px;
+    padding-right: 20px;
+    margin: 1px auto;
+    border-radius: 4px;
+  }
+
+  .DateText {
+    display: inline-block;
+    font-family: sukar-Regular;
+    font-weight: bold;
+    color: #f2f2f2;
+    padding-right: 2px;
+  }
+
+  .match-grid {
+    color: #ffffff;
+  }
+
+  .grid-css {
+    height: 35px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 3px;
+    border: color($colors, body) solid 1px;
+    color: black;
+    background: -webkit-linear-gradient(90deg, rgb(233, 227, 227) 0, rgb(255, 255, 255) 100%);
+    background: -moz-linear-gradient(0deg, rgb(233, 227, 227) 0, rgb(255, 255, 255) 100%);
+    background: linear-gradient(0deg, rgb(233, 227, 227) 0, rgb(255, 255, 255) 100%);
+  }
+
+  .grid-text{
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 0.850em;
+    font-family: sukar-Regular;
+  }
+
+  .match-time{
+    position: relative;
+    background: color($colors, danger);
+    border-radius: 0px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .match-time-text{
+    position: relative;
+    margin: 0 auto;
+    padding-top: 8px;
+    font-size: 0.700em;
+    font-weight: bold;
+    color: white;
+  }
+
+  .clublogo{
+    position: absolute;
+    right: 2px;
+    width: 33px;
+  }
+
+  .clublogo2{
+    position: absolute;
+    left: 2px;
+    width: 33px;
+  }
+}

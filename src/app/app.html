@@ -1,18 +1,15 @@
-<ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+<ion-menu type="push" [content]="content">
+  <ion-content style="background: #103746;">
+    <img style="display: block; height:150px; margin: auto;" src="https://firebasestorage.googleapis.com/v0/b/dawristar-c6a06.appspot.com/o/dawriStar.png?alt=media&token=80e6cf72-fd32-45fe-963c-66587a07262d">
+    <ion-list no-lines>
+      <button menuClose style="background: #103746;" ion-item detail-none *ngFor="let p of pages" (click)="openPage(p)">
+      <div class="pages">
         {{p.title}}
-      </button>
+      </div>
+    </button>
     </ion-list>
-  </ion-content>
 
+  </ion-content>
 </ion-menu>
 
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->

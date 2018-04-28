@@ -1,3 +1,203 @@
 page-home {
 
+  .icon {
+    color: color($colors, light);
+  }
+
+  .ion-content {
+    background-color: color($colors, body);
+  }
+
+  .scroll-bar-indicator{
+	  display: none;
+  }
+
+  .sliderNews {
+    position: relative;
+    padding: 0px;
+    margin: auto;
+    width: 100%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .headermenu {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 35px;
+    color: #f2f2f2;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+  .headersearch {
+    position: absolute;
+    top: 20px;
+    left: 18px;
+    font-size: 30px;
+  }
+
+  .card-title {
+    position: absolute;
+    bottom: 45%;
+    font-size: 1em;
+    width: 100%;
+    color: #fff;
+  }
+
+  .card-title-cat {
+    position: absolute;
+    padding: 10px;
+    right: 0;
+    width: 70%;
+    font-family: sukar-Regular;
+    font-size: 1.5em;
+    background: linear-gradient(-60deg,rgba(209, 227, 144, 0.446), rgb(209, 227, 144) );
+    border-left: 6px solid color($colors, secondary);
+  }
+
+  .card-img {
+    position: relative;
+    width: 100%;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 10px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .DateBox {
+    position: relative;
+    text-align: right;
+    direction: rtl;
+    color: #f2f2f2;
+    background-image: linear-gradient(to right, #a8caba 0%, #103746 100%);
+    padding: 5px;
+    padding-right: 20px;
+    margin: 1px auto;
+    border-radius: 4px;
+  }
+
+  .DateText {
+    display: inline-block;
+    font-family: sukar-Regular;
+    font-weight: bold;
+    color: #f2f2f2;
+    padding-right: 2px;
+  }
+
+  .match-grid {
+    color: #ffffff;
+  }
+
+  .grid-css {
+    height: 35px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 3px;
+    border: color($colors, body) solid 1px;
+    color: black;
+    background: -webkit-linear-gradient(90deg, rgb(233, 227, 227) 0, rgb(255, 255, 255) 100%);
+    background: -moz-linear-gradient(0deg, rgb(233, 227, 227) 0, rgb(255, 255, 255) 100%);
+    background: linear-gradient(0deg, rgb(233, 227, 227) 0, rgb(255, 255, 255) 100%);
+  }
+
+  .grid-text{
+    position: relative;
+    direction: rtl;
+    margin: 0 auto;
+    padding-top: 10px;
+    font-size: 0.950em;
+    text-align: center;
+    font-family: sukar-Regular;
+  }
+
+  .match-time{
+    position: relative;
+    background: color($colors, danger);
+    border-radius: 0px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .match-time-text{
+    position: relative;
+    font-size: 1.2em;
+    font-family: sukar-Regular;
+    color: color($colors, light);
+  }
+
+  ion-card {
+    position: relative;
+    text-align: right;
+    width: 100%;
+    direction: rtl;
+  }
+  .card-ul {
+    list-style-type: none;
+    position: absolute;
+    bottom: 8%;
+    right: 10px;
+    left: 10px;
+  }
+  .card-title-news {
+    direction: rtl;
+    font-size: 1.500em;
+    color: #f2f2f2;
+    font-family: Lateef;
+  }
+  .card-subtitle-news {
+    direction: rtl;
+    font-size: 1em;
+    color: #f2f2f2;
+    font-family: Lateef;
+  }
+
+  .card-details-view {
+    position: absolute;
+    bottom: 3%;
+    left: 15px;
+    color: color($colors, dark);
+    opacity: 0.5;
+    z-index: 1;
+  }
+
+  .card-details-thumbs {
+    position: absolute;
+    bottom: 3%;
+    left: 70px;
+    color: color($colors, dark);
+    opacity: 0.5;
+    z-index: 1;
+  }
+
+  .card-details-comments {
+    position: absolute;
+    bottom: 3%;
+    left: 120px;
+    color: color($colors, dark);
+    opacity: 0.5;
+    z-index: 1;
+  }
+
+  .card-news-background {
+    height: 100%;
+    padding: 10px;
+
+  }
+
+  .card-news-image {
+    max-width: 100%;
+    width: 800px;
+    margin: auto;
+  }
+
+  .card-news-image::after {
+    display: block;
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #103746 100%);
+    margin-top: -250px;
+    height: 250px;
+    width: 100%;
+    content: '';
+  }
+
 }

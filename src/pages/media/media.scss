@@ -1,0 +1,34 @@
+page-media {
+  .icon {
+    color: color($colors, dark);
+  }
+
+  .ion-content {
+    background-color: color($colors, body);
+  }
+
+  .scroll-bar-indicator{
+	  display: none;
+  }
+
+    ion-card {
+    position: relative;
+    text-align: center;
+    height: 250px;
+  }
+
+  .card-title {
+    position: absolute;
+    padding: 5px;
+    bottom: 0;
+    font-size: 1.0em;
+    width: 100%;
+    font-weight: bold;
+    color: color($colors, light);
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .img {
+    height: 100%;
+  }
+}

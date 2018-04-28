@@ -1,0 +1,89 @@
+<ion-header #head>
+    <ion-icon class="backicon" name="ios-arrow-back" (click)="goBack()"></ion-icon>
+</ion-header>
+
+<ion-content class="ion-content" autohide [header]="head">
+  <div class="match-card">
+    <div class="homeimg">
+        <img width="60px" height="60px" [src]="matchInfo.home_bdg">
+        <p class="teams">{{matchInfo.home}}</p>
+    </div>
+
+    <div class="awayimg">
+        <img width="60px" height="60px" [src]="matchInfo.away_bdg">
+        <p class="teams">{{matchInfo.away}}</p>
+    </div>
+  </div>
+
+  <div>
+      <p class="time">{{matchInfo.time}}</p>
+  </div>
+
+  <ion-grid class="player-info-grid">
+    <ion-row>
+      <ion-col class="player-info-col" (click)="showAway()">{{matchInfo.away}}</ion-col>
+      <ion-col class="player-info-col" (click)="showHome()">{{matchInfo.home}}</ion-col>
+    </ion-row>
+  </ion-grid>
+  <div [hidden]=hidehome>
+    <h1 class="not-ready-text">تشكيلة الفريقين غير جاهزة</h1>
+    <img class="field-img" src="../../assets/img/field.jpg"/>
+  </div>
+  <div [hidden]=hideaway>
+    <h1 class="not-ready-text">تشكيلة الفريقين غير جاهزة</h1>
+    <img class="field-img" src="../../assets/img/field.jpg"/>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col class="col-css">
+        المعلقين
+      </ion-col>
+      <ion-col class="col-css">
+        الحكم
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="row-css">
+      <ion-col>
+        {{matchInfo.comm}}
+      </ion-col>
+      <ion-col>
+        {{matchInfo.ref}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="col-css">
+        المعلب
+      </ion-col>
+      <ion-col class="col-css">
+        سعة الملعب
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="row-css">
+      <ion-col>
+        {{matchInfo.field}}
+      </ion-col>
+      <ion-col>
+        90,000 متفرج
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="col-css">
+        القنوات الناقلة
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row class="row-css">
+      <ion-col>
+        {{matchInfo.tv}}
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

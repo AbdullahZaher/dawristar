@@ -1,0 +1,73 @@
+page-viewtopic {
+  .ion-content {
+    background-color: color($colors, body);
+  }
+  .scroll-bar-indicator{
+    display: none;
+  }
+
+  .backicon {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 30px;
+    font-style: normal;
+    color: color($colors, light);
+  }
+  .post{
+    background-image: linear-gradient(-60deg, #103746 0%, #5DA4C0 100%);
+    width: 100%;
+    height: 200px;
+    z-index: 1;
+  }
+  .post-back{
+    position: absolute;
+    top: 60px;
+    width: 90%;
+    margin-top: auto;
+    margin-bottom: 20px;
+    margin-right: 5%;
+    margin-left: 5%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .post-text{
+    margin-top: 40px;
+  }
+  .title{
+    margin: 0 auto;
+    direction: rtl;
+    padding: 10px;
+    font-family: sukar-Regular;
+    font-size: 1.800em;
+    text-align: center;
+    color: color($colors, primary);
+  }
+  .header-img {
+    position: relative;
+    border-radius: 5px;
+    height: 100px;
+    width: 100px;
+    padding: 2px;
+    float: right;
+  }
+  .author {
+    margin: 0 auto;
+    font-family: Lateef;
+    font-size: 20px;
+    text-align: right;
+  }
+  .date {
+    font-family: Lateef;
+    font-size: 16px;
+    text-align: right;
+  }
+  p{
+    margin: 0 auto;
+    padding: 0px 5px 0px 5px;
+    direction: rtl;
+    font-family: Lateef;
+    font-size: 1.3em;
+  }
+}

@@ -1,0 +1,56 @@
+<ion-header #head>
+  <ion-icon class="backicon" name="ios-arrow-back" (click)="goBack()"></ion-icon>
+</ion-header>
+
+<ion-content class="ion-content" autohide [header]="head">
+<div class="post">
+  <img [src]="newsInfo.img">
+  <h3>{{ newsInfo.title }}</h3>
+  <div class="detail">
+    <span class="author">الكاتب: عبدالله زاهر</span>
+    <i class="fa fa-square fa-style"></i>
+    <span class="date"> الوقت:</span>
+  </div>
+  <p [innerHTML]="newsInfo.text"></p>
+
+  <div>
+    <h5>كلمات دليلية</h5>
+      <div class="tag">
+        <span class="keywords">{{ newsInfo.keywords }}</span>
+      </div>
+  </div>
+</div>
+
+<div>
+<ion-list>
+  <div class="list-header">
+    <h5 style="color: black">أخبار متداولة</h5>
+  </div>
+
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="http://img.kooora.com/?i=reuters%2f2018-03-26%2f2018-03-26t141149z_877007068_rc1ee002fe70_rtrmadp_3_soccer-friendly-bel-sau-preview_reuters.jpg">
+    </ion-avatar>
+    <h3>هازارد: نسعى لإمتاع جماهير بلجيكا أمام السعودية</h3>
+    <p>أكد إيدين هازارد نجم تشيلسي الإنجليزي ومنتخب بلجيكا...</p>
+  </ion-item>
+
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="http://img.kooora.com/?i=reuters%2f2018-03-26%2f2018-03-26t141149z_877007068_rc1ee002fe70_rtrmadp_3_soccer-friendly-bel-sau-preview_reuters.jpg">
+    </ion-avatar>
+    <h3>هازارد: نسعى لإمتاع جماهير بلجيكا أمام السعودية</h3>
+    <p>أكد إيدين هازارد نجم تشيلسي الإنجليزي ومنتخب بلجيكا...</p>
+  </ion-item>
+    <ion-item>
+    <ion-avatar item-start>
+      <img src="http://img.kooora.com/?i=reuters%2f2018-03-26%2f2018-03-26t141149z_877007068_rc1ee002fe70_rtrmadp_3_soccer-friendly-bel-sau-preview_reuters.jpg">
+    </ion-avatar>
+    <h3>هازارد: نسعى لإمتاع جماهير بلجيكا أمام السعودية</h3>
+    <p>أكد إيدين هازارد نجم تشيلسي الإنجليزي ومنتخب بلجيكا...</p>
+  </ion-item>
+
+</ion-list>
+</div>
+
+</ion-content>

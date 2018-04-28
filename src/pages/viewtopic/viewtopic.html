@@ -1,0 +1,21 @@
+<ion-header #head>
+  <ion-icon class="backicon" name="ios-arrow-back" (click)="goBack()"></ion-icon>
+</ion-header>
+
+<ion-content class="ion-content" autohide [header]="head">
+  <div class="post">
+    <br>
+  </div>
+
+  <div class="post-back">
+    <img class="header-img" [src]="topicInfo.img">
+    <div class="author"> {{ topicInfo.author }} </div>
+    <div class="date"> {{ topicInfo.date }} </div>
+
+    <div class="post-text">
+      <div class="title" text-wrap> {{ topicInfo.title }} </div>
+      <p [innerHTML]="topicInfo.essay"></p>
+    </div>
+
+  </div>
+</ion-content>

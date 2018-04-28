@@ -1,18 +1,55 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+<ion-header #head>
+    <ion-icon class="headermenu" name="ios-list" #icon menuToggle></ion-icon>
+    <!-- <ion-icon class="headersearch" name="ios-search"></ion-icon> -->
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content class="ion-content" autohide [header]="head">
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <ion-slides [speed]="500" [loop]="true" pager class="sliderNews">
+    <ion-slide *ngFor="let slides of items | async">
+      <img class="card-img" [src]="slides.slideImg" (click)="showNewsInfo(slides)">
+      <div class="card-title"><span class="card-title-cat" [innerHTML]="slides.title" (click)="showNewsInfo(slides)"></span></div>
+    </ion-slide>
+  </ion-slides>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-grid>
+    <ion-row>
+      <ion-col no-padding>
+        <div class="DateBox"><i class="fa fa-calendar"></i>  <div class="DateText"> مباريات اليوم </div></div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="grid-css" *ngFor="let match of matchitems | async" (click)="showMatchInfo(match)">
+      <ion-col col-1>
+        <img width="30px" height="25px" [src]="match.away_bdg">
+      </ion-col>
+      <ion-col class="grid-text">
+        {{match.away}}
+      </ion-col>
+      <ion-col class="match-time" col-2>
+        <div class="match-time-text">{{match.time}}</div>
+      </ion-col>
+      <ion-col class="grid-text">
+        {{match.home}}
+      </ion-col>
+      <ion-col col-1>
+        <img width="30px" height="25px" [src]="match.home_bdg">
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+  <ion-card *ngFor="let item of items | async">
+    <div class="card-news-image" *ngIf=item.isShown (click)="showNewsInfo(item)">
+    <img [src]="item.img"/>
+    </div>
+    <ul class="card-ul" (click)="showNewsInfo(item)">
+      <li class="card-title-news"> {{item.title}} </li>
+      <li class="card-subtitle-news" [innerHTML]="item.desc"></li>
+    </ul>
+      <div class="card-details-view">{{item.newsViews}} <i class="fa fa-eye" aria-hidden="true"></i></div>
+      <div class="card-details-thumbs">{{item.newsLikes}} <i class="fa fa-thumbs-o-up" aria-hidden="true"></i></div>
+      <div class="card-details-comments">121 <i class="fa fa-comments-o" aria-hidden="true"></i></div>
+  </ion-card>
+
 </ion-content>
