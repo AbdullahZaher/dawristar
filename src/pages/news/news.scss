@@ -7,51 +7,28 @@ page-news {
     background-color: color($colors, body);
   }
 
-  ion-card {
-    position: relative;
-    width: 100%;
-  }
-
-  .ion-card-title {
-    position: absolute;
-    margin: 0 auto;
-    font-family: sukar-Bold;
-    font-size: 1.2em;
-    color: color($colors, light);
-    top: 190px;
-    left: 10px;
-    padding: 5px;
-  }
-
-  .ion-card-title {
-    background: rgba(0,0,0,0.5);
-    border-left: 6px solid color($colors, danger);
-  }
-
-  .card-btn {
-    position: absolute;
-    bottom: 3%;
-    left: 8px;
+  .ion-item {
     direction: rtl;
-    color: #F2F2F2;
-  }
-  .button {
-    color: color($colors, dark);
-    background-color: color($colors, primary);
-    border: 1px solid #D1E390;
-    border-radius: 14px;
-    padding: 5px;
-  }.button:hover{
-    background-color: color($colors, danger);
-    color: color($colors, dark);
+    background-color: color($colors, light);
   }
 
   img {
-    height: 230px;
-    width: 100%;
+    direction: rtl;
+    border-radius: 2px;
+  }
+
+  h1 {
+    direction: rtl;
+    font-family: sukar-Regular;
   }
 
   p {
     direction: rtl;
+    font-family: Sukar-Regular;
+    padding-top: 7px;
+  }
+
+  .square {
+    font-size: 5px;
   }
 }

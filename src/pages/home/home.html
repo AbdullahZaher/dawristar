@@ -21,7 +21,7 @@
 
     <ion-row class="grid-css" *ngFor="let match of matchitems | async" (click)="showMatchInfo(match)">
       <ion-col col-1>
-        <img width="30px" height="25px" [src]="match.away_bdg">
+        <img width="50px" height="25px" src="../../assets/img/teamsicon/{{match.away_bdg}}.png">
       </ion-col>
       <ion-col class="grid-text">
         {{match.away}}
@@ -33,7 +33,7 @@
         {{match.home}}
       </ion-col>
       <ion-col col-1>
-        <img width="30px" height="25px" [src]="match.home_bdg">
+        <img width="50px" height="25px" src="../../assets/img/teamsicon/{{match.home_bdg}}.png">
       </ion-col>
     </ion-row>
 

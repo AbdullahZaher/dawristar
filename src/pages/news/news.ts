@@ -4,6 +4,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import { ViewnewsPage } from '../viewnews/viewnews';
 
 // News interface
 interface Newsinf {
@@ -55,4 +56,7 @@ export class NewsPage {
     this.items = this.newsCol.valueChanges();
   }
 
+  showNewsInfo(item){
+    this.navCtrl.push(ViewnewsPage, item);
+  }
 }

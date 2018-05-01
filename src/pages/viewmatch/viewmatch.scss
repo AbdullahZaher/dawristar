@@ -78,9 +78,10 @@ page-viewmatch {
     font-size: 1.2em;
     color: color($colors, primary);
     border-radius: 1px;
-    background: #CAC531;
-    background: -webkit-linear-gradient(to top, #E0BC82, #D4BE82);
-    background: linear-gradient(to top, #E0BC82, #D4BE82);
+    background: #968e81;
+    background: -webkit-linear-gradient(to bottom, #ebe1d2, #968e81);
+    background: linear-gradient(to bottom, #ebe1d2, #968e81);
+    opacity: 0.9;
   }
 
   .player-info-grid {

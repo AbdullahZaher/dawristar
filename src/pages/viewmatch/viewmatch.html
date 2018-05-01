@@ -5,12 +5,12 @@
 <ion-content class="ion-content" autohide [header]="head">
   <div class="match-card">
     <div class="homeimg">
-        <img width="60px" height="60px" [src]="matchInfo.home_bdg">
+        <img width="60px" height="60px" src="../../assets/img/teamsicon/{{matchInfo.home_bdg}}.png">
         <p class="teams">{{matchInfo.home}}</p>
     </div>
 
     <div class="awayimg">
-        <img width="60px" height="60px" [src]="matchInfo.away_bdg">
+        <img width="60px" height="60px"  src="../../assets/img/teamsicon/{{matchInfo.away_bdg}}.png">
         <p class="teams">{{matchInfo.away}}</p>
     </div>
   </div>
@@ -95,7 +95,7 @@
         {{matchInfo.field}}
       </ion-col>
       <ion-col>
-        90,000 متفرج
+        متفرج {{matchInfo.audi}}
       </ion-col>
     </ion-row>
 

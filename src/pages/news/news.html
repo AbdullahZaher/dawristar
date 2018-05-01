@@ -9,18 +9,11 @@
 
 <ion-content class="ion-content">
 
-<ion-card *ngFor="let item of items | async">
-  <div *ngIf=item.isShown>
-  <img [src]="item.img"/>
-  <ion-card-content>
-    <ion-card-title class="ion-card-title">
-      {{item.title}}
-    </ion-card-title>
-  <p [innerHTML]="item.desc"></p>
-  <br>
-  </ion-card-content>
-  <div class="card-btn"><button class="button">المزيد</button></div>
-  </div>
-</ion-card>
+<ion-list>
+  <ion-item class="ion-item" *ngFor="let item of items | async" (click)="showNewsInfo(item)">
+    <img [src]="item.img" width="100px" height="90px" item-start>
+    <h1 text-wrap>{{item.title}}</h1>
+  </ion-item>
+</ion-list>
 
 </ion-content>
