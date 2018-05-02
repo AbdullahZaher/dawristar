@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the YesterdayPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { AllMatchesPage } from '../all-matches/all-matches';
+import { TomorrowPage } from '../tomorrow/tomorrow';
+import { TodayPage } from '../today/today';
 
 @IonicPage()
 @Component({
@@ -18,4 +14,13 @@ export class YesterdayPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  showAllMatches() {
+    this.navCtrl.push(AllMatchesPage);
+  }
+  showTomorrowPage() {
+    this.navCtrl.push(TomorrowPage);
+  }
+  showTodayPage() {
+    this.navCtrl.push(TodayPage);
+  }
 }

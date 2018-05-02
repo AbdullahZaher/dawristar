@@ -5,6 +5,9 @@ import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/fires
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { ViewmatchPage } from '../viewmatch/viewmatch';
+import { TomorrowPage } from '../tomorrow/tomorrow';
+import { YesterdayPage } from '../yesterday/yesterday';
+import { TodayPage } from '../today/today';
 
 // Matches interface
 interface Matinf {
@@ -50,6 +53,15 @@ export class AllMatchesPage {
 
   showMatchInfo(matchitem) {
     this.navCtrl.push(ViewmatchPage, matchitem);
+  }
+  showTomorrowPage() {
+    this.navCtrl.push(TomorrowPage);
+  }
+  showYesterdayMatches() {
+    this.navCtrl.push(YesterdayPage);
+  }
+  showTodayPage() {
+    this.navCtrl.push(TodayPage);
   }
 
   ngOnInit() {

@@ -9,7 +9,10 @@ import { environment } from '../environments/environment';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { MatchesPage } from '../pages/matches/matches';
+import { TodayPage } from '../pages/today/today';
+import { AllMatchesPage } from '../pages/all-matches/all-matches';
+import { YesterdayPage } from '../pages/yesterday/yesterday';
+import { TomorrowPage } from '../pages/tomorrow/tomorrow';
 import { NewsPage } from './../pages/news/news';
 import { ArticlePage } from './../pages/article/article';
 import { TablesPage } from './../pages/tables/tables';
@@ -27,11 +30,15 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    MatchesPage,
+    TodayPage,
+    AllMatchesPage,
+    YesterdayPage,
+    TomorrowPage,
     NewsPage,
     ArticlePage,
     TablesPage,
@@ -54,7 +61,10 @@ import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/dat
   entryComponents: [
     MyApp,
     HomePage,
-    MatchesPage,
+    TodayPage,
+    AllMatchesPage,
+    YesterdayPage,
+    TomorrowPage,
     NewsPage,
     ArticlePage,
     TablesPage,

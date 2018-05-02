@@ -6,12 +6,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 // Pages
 import { HomePage } from '../pages/home/home';
 import { AboutUsPage } from '../pages/about-us/about-us';
-import { MatchesPage } from '../pages/matches/matches';
 import { NewsPage } from './../pages/news/news';
 import { ArticlePage } from './../pages/article/article';
 import { TablesPage } from './../pages/tables/tables';
 import { MediaPage } from './../pages/media/media';
 import { TrendsPage } from './../pages/trends/trends';
+import { TodayPage } from '../pages/today/today';
 
 @Component({
   templateUrl: 'app.html'
@@ -29,7 +29,7 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: ' الاولى ', component: HomePage },
-      { title: ' المباريات ', component: MatchesPage },
+      { title: ' المباريات ', component: TodayPage },
       { title: ' اخبار ', component: NewsPage },
       { title: ' مقالات ', component: ArticlePage },
       { title: ' جداول الترتيب ', component: TablesPage },

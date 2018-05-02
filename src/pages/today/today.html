@@ -1,10 +1,10 @@
 <ion-header>
-  <ion-navbar color="primary">
+  <ion-toolbar hideBackButton="true" color="primary">
     <button ion-button right menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>مباريات اليوم</ion-title>
-  </ion-navbar>
+  </ion-toolbar>
 </ion-header>
 
 
@@ -379,3 +379,23 @@
 
 </ion-content>
 
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-grid>
+      <ion-row>
+        <ion-col text-center>
+          <ion-icon ios="ios-flame" md="md-flame"></ion-icon>
+        </ion-col>
+        <ion-col (click)="showYesterdayMatches()" text-center>
+          <ion-icon ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle"></ion-icon>
+        </ion-col>
+        <ion-col (click)="showTomorrowMatches()" text-center>
+          <ion-icon ios="ios-arrow-dropleft-circle" md="md-arrow-dropleft-circle"></ion-icon>
+        </ion-col>
+        <ion-col (click)="showAllMatches()" text-center>
+          <ion-icon ios="ios-calendar" md="md-calendar"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>
