@@ -44,6 +44,17 @@ page-viewmatch {
     width: 100%;
   }
 
+  .day {
+    position: absolute;
+    padding: 10px 20px 10px 20px;
+    top: 95px;
+    transform: translateX(-50%);
+    left: 50%;
+    border-radius: 1px;
+    color: color($colors, light);
+    text-align: center;
+  }
+
   .time {
     position: absolute;
     display: inline-block;
@@ -104,7 +115,7 @@ page-viewmatch {
   }
   ion-card img {
     display: block;
-    margin-left: 23%;
+    
   }
   .name {
     position: absolute;
