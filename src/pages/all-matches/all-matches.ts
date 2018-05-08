@@ -4,6 +4,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+
 import { ViewmatchPage } from '../viewmatch/viewmatch';
 import { TomorrowPage } from '../tomorrow/tomorrow';
 import { YesterdayPage } from '../yesterday/yesterday';
@@ -67,7 +68,7 @@ export class AllMatchesPage {
   ngOnInit() {
 
     this.matchesCol = this.afs.collection('matches', ref => {
-      return ref.orderBy('day', 'desc')
+      return ref.orderBy('day').orderBy('time', 'asc')
     });
     this.matchitems = this.matchesCol.valueChanges();
   }

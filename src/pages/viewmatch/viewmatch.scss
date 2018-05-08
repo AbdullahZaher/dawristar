@@ -113,10 +113,22 @@ page-viewmatch {
     border-radius: 20px!important;
     opacity: 0.8;
   }
-  ion-card img {
+   .player-img {
     display: block;
-    
+    margin-left: 23%;
   }
+
+  .team-not-ready-img {
+    display: block;
+    margin-top: -60px;
+  }
+  .team-not-ready-h2 {
+    margin: 20px 0 0 0;
+    font-family: Sukar-Regular;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
   .name {
     position: absolute;
   }

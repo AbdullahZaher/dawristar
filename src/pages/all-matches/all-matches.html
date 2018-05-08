@@ -10,12 +10,7 @@
 
 <ion-content class="ion-content">
   <ion-grid>
-    <ion-row>
-      <ion-col no-padding>
-        <div class="DateBox"><i class="fa fa-calendar"></i>  <div class="DateText"> مباريات اليوم </div></div>
-      </ion-col>
-    </ion-row>
-
+    
     <ion-row class="grid-css" *ngFor="let match of matchitems | async" (click)="showMatchInfo(match)">
       <ion-col col-1>
         <img width="50px" height="25px" src="../../assets/img/teamsicon/{{match.away_bdg}}.png">

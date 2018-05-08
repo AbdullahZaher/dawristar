@@ -86,4 +86,13 @@ page-today {
     font-size: 2em;
   }
 
+  .nomatches {
+    position: absolute;
+    transform: translateX(-50%);
+    top: 30%;
+    left: 50%;
+    font-size: 1.3em;
+    text-align: center;
+    font-style: bold;
+  }
 }

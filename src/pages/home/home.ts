@@ -6,6 +6,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { ViewnewsPage } from '../viewnews/viewnews';
 import { ViewmatchPage } from '../viewmatch/viewmatch';
+import * as moment from 'moment';
 
 // News interface
 interface Newsinf {
@@ -38,6 +39,8 @@ interface Matinf {
   comm: string;
   tag: string;
 }
+
+let now = moment().format('YYYY-MM-DD');
 
 @Component({
   selector: 'page-home',
@@ -95,7 +98,7 @@ export class HomePage {
     this.items = this.newsCol.valueChanges();
 
     this.matchesCol = this.afs.collection('matches', ref => {
-      return ref.orderBy('day', 'desc')
+      return ref.where('day', '==', now)
     });
     this.matchitems = this.matchesCol.valueChanges();
   }

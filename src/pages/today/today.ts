@@ -1,8 +1,33 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+// Connect Page with Firebase
+import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import * as moment from 'moment';
+
+import { ViewmatchPage } from '../viewmatch/viewmatch';
 import { AllMatchesPage } from '../all-matches/all-matches';
 import { YesterdayPage } from '../yesterday/yesterday';
 import { TomorrowPage } from '../tomorrow/tomorrow';
+
+// Matches interface
+interface Matinf {
+  league: string;
+  home: string;
+  home_bdg: string;
+  away: string;
+  away_bdg: string;
+  day: string;
+  time: string;
+  field: string;
+  ref: string;
+  tv: string;
+  comm: string;
+  tag: string;
+}
+
+let now = moment().format('YYYY-MM-DD');
 
 @IonicPage()
 @Component({
@@ -10,19 +35,44 @@ import { TomorrowPage } from '../tomorrow/tomorrow';
   templateUrl: 'today.html',
 })
 export class TodayPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  nomatches:boolean = true;
+   
+  matchesCol: AngularFirestoreCollection<Matinf>;
+  matchitems: Observable<Matinf[]>;
+  league: string;
+  home: string;
+  home_bdg: string;
+  away: string;
+  away_bdg: string;
+  day: string;
+  time: string;
+  field: string;
+  ref: string;
+  tv: string;
+  comm: string;
+  tag: string;
+  
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams, public afs: AngularFirestore) { }
     
-  }
-
-  showAllMatches() {
-    this.navCtrl.push(AllMatchesPage);
-  }
-  showYesterdayMatches() {
-    this.navCtrl.push(YesterdayPage);
-  }
-  showTomorrowMatches() {
-    this.navCtrl.push(TomorrowPage);
-  }
+    showMatchInfo(matchitem) {
+      this.navCtrl.push(ViewmatchPage, matchitem);
+    }
+    showAllMatches() {
+      this.navCtrl.push(AllMatchesPage);
+    }
+    showYesterdayMatches() {
+      this.navCtrl.push(YesterdayPage);
+    }
+    showTomorrowMatches() {
+      this.navCtrl.push(TomorrowPage);
+    }
+  
+    ngOnInit() {
+      this.matchesCol = this.afs.collection('matches', ref => {
+        return ref.where('day', '==', now)
+      });
+        this.matchitems = this.matchesCol.valueChanges();
+    }
 
 }

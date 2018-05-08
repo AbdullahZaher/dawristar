@@ -30,40 +30,39 @@
     </ion-row>
   </ion-grid>
   <div [hidden]=hidehome>
-
-
-    <ion-scroll scrollX="true" pager="true" style="white-space: nowrap; height: 320px;">
-      
-      <ion-card>
-        <div class="name">
-          <h2 text-wrap>Messi</h2>
-          <h1>10</h1>
-        </div>
-        <img src="../../assets/img/top-players.png" />
-      </ion-card>
-
-      <ion-card>
-        <div class="name">
-          <h2 text-wrap>Messi</h2>
-          <h1>10</h1>
-        </div>
-        <img src="https://www.futwiz.com/assets/img/fifa18/faces/117598535.png" />
-      </ion-card>
-
-      <ion-card>
-        <div class="name">
-          <h2 text-wrap>Messi</h2>
-          <h1>10</h1>
-        </div>
-        <img src="https://www.futwiz.com/assets/img/fifa18/faces/117598535.png" />
-      </ion-card>
     
+    <ion-card>
+      <h2 class="team-not-ready-h2" text-wrap>تشكيلة فريق {{matchInfo.home}} غير جاهزة</h2>
+      <img class="team-not-ready-img" src="../../assets/img/top-players.png" />
+    </ion-card>
+
+    <ion-scroll scrollX="true" pager="true" style="white-space: nowrap; height: 320px;" [hidden]=hometeamava>
+      <ion-card>
+        <div class="name">
+          <h2 text-wrap>Messi</h2>
+          <h1>10</h1>
+        </div>
+        <img class="player-img" src="https://www.futwiz.com/assets/img/fifa18/faces/117598535.png" />
+      </ion-card>
     </ion-scroll>
     
   </div>
   <div [hidden]=hideaway>
-    
-    
+    <ion-card>
+      <h2 class="team-not-ready-h2" text-wrap>تشكيلة فريق {{matchInfo.away}} غير جاهزة</h2>
+      <img class="team-not-ready-img" src="../../assets/img/top-players.png" />
+    </ion-card>
+
+    <ion-scroll scrollX="true" pager="true" style="white-space: nowrap; height: 320px;" [hidden]=awayteamava>
+      <ion-card>
+        <div class="name">
+          <h2 text-wrap>Messi</h2>
+          <h1>10</h1>
+        </div>
+        <img class="player-img" src="https://www.futwiz.com/assets/img/fifa18/faces/117598535.png" />
+      </ion-card>
+    </ion-scroll>
+
   </div>
 
   <ion-grid>

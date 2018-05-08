@@ -13,6 +13,9 @@ export class ViewmatchPage {
   hideawayplayer:boolean = true;
   matchInfo: any;
 
+  hometeamava:boolean = true;
+  awayteamava:boolean = true;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.matchInfo = navParams.data;
   }
