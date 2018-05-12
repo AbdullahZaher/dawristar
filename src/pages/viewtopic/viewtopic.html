@@ -10,7 +10,7 @@
   <div class="post-back">
     <img class="header-img" [src]="topicInfo.img">
     <div class="author"> {{ topicInfo.author }} </div>
-    <div class="date"> {{ topicInfo.date }} </div>
+    <div class="date"> {{ topicInfo.date | amLocale:'ar-sa' | amTimeAgo }} </div>
 
     <div class="post-text">
       <div class="title" text-wrap> {{ topicInfo.title }} </div>

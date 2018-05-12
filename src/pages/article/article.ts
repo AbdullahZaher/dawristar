@@ -6,7 +6,6 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { ViewtopicPage } from '../viewtopic/viewtopic';
 
-
 // Article interface
 interface Artinf {
   title: string;

@@ -30,6 +30,9 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 
+// Moment
+import { MomentModule } from 'ngx-moment';
+
 
 @NgModule({
   declarations: [
@@ -55,7 +58,8 @@ import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/dat
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(environment.firebaseconfig),
     AngularFirestoreModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    MomentModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

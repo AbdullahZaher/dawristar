@@ -9,55 +9,94 @@
 </ion-header>
 
 <ion-content class="ion-content">
+  <div style="direction: rtl; margin-bottom: 15px;" text-center>
+    <ion-grid class="ion-card">
+      <ion-row class="groups">
+        <ion-col>المجموعة أ</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let item of itemsA | async" class="teams">
+        <ion-col><img width="20px" src="../../assets/img/teamsicon/{{item.logo}}.png" /></ion-col>
+        <ion-col>{{item.team}}</ion-col>
+        <ion-col>{{item.points}}</ion-col>
+      </ion-row>
+    </ion-grid>
 
-  <select class="ion-input-select">
-    <option disabled>اختار الدوري لعرض جدول الترتيب</option>
-    <option value="sa">الدوري السعودي</option>
-    <option value="en">الدوري الانجليزي</option>
-    <option value="sp">الدوري الاسباني</option>
-    <option value="it">الدوري الايطالي</option>
-    <option value="gr">الدوري الالماني</option>
-    <option value="fr">الدوري الفرنسي</option>
-  </select>
+    <ion-grid class="ion-card">
+      <ion-row class="groups">
+        <ion-col>المجموعة ب</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let itemb of itemsB | async" class="teams">
+        <ion-col><img width="20px" src="../../assets/img/teamsicon/{{itemb.logo}}.png" /></ion-col>
+        <ion-col>{{itemb.team}}</ion-col>
+        <ion-col>{{itemb.points}}</ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid class="ion-card">
+      <ion-row class="groups">
+        <ion-col>المجموعة ج</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let itemc of itemsC | async" class="teams">
+        <ion-col><img width="20px" src="../../assets/img/teamsicon/{{itemc.logo}}.png" /></ion-col>
+        <ion-col>{{itemc.team}}</ion-col>
+        <ion-col>{{itemc.points}}</ion-col>
+      </ion-row>
+    </ion-grid>
 
-  <ion-grid>
+    <ion-grid class="ion-card">
+      <ion-row class="groups">
+        <ion-col>المجموعة د</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let itemd of itemsD | async" class="teams">
+        <ion-col><img width="20px" src="../../assets/img/teamsicon/{{itemd.logo}}.png" /></ion-col>
+        <ion-col>{{itemd.team}}</ion-col>
+        <ion-col>{{itemd.points}}</ion-col>
+      </ion-row>
+    </ion-grid>
 
-    <ion-row>
-      <ion-col class="ion-col-1" col-5>
-        <div class="TableText"> الفريق </div>
-      </ion-col>
-      <ion-col class="ion-col-1">
-        <div class="TableText"> لعب </div>
-      </ion-col>
-      <ion-col class="ion-col-1">
-        <div class="TableText"> فاز </div>
-      </ion-col>
-      <ion-col class="ion-col-1">
-        <div class="TableText"> خسر </div>
-      </ion-col>
-      <ion-col class="ion-col-1">
-        <div class="TableText"> النقاط </div>
-      </ion-col>
-    </ion-row>
+    <ion-grid class="ion-card">
+      <ion-row class="groups">
+        <ion-col>المجموعة هـ</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let iteme of itemsE | async" class="teams">
+        <ion-col><img width="20px" src="../../assets/img/teamsicon/{{iteme.logo}}.png" /></ion-col>
+        <ion-col>{{iteme.team}}</ion-col>
+        <ion-col>{{iteme.points}}</ion-col>
+      </ion-row>
+    </ion-grid>
+    
+    <ion-grid class="ion-card">
+      <ion-row class="groups">
+        <ion-col>المجموعة و</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let itemf of itemsF | async" class="teams">
+        <ion-col><img width="20px" src="../../assets/img/teamsicon/{{itemf.logo}}.png" /></ion-col>
+        <ion-col col-auto>{{itemf.team}}</ion-col>
+        <ion-col>{{itemf.points}}</ion-col>
+      </ion-row>
+    </ion-grid>
 
-    <ion-row *ngFor="let view of tables">
-      <ion-col class="ion-col-2" col-5>
-        <div class="TeamsText">{{view.order}} - {{view.team}} </div>
-      </ion-col>
-      <ion-col class="ion-col-2">
-        <div class="TeamsText"> {{view.play}} </div>
-      </ion-col>
-      <ion-col class="ion-col-2">
-        <div class="TeamsText"> {{view.win}} </div>
-      </ion-col>
-      <ion-col class="ion-col-2">
-        <div class="TeamsText"> {{view.lose}} </div>
-      </ion-col>
-      <ion-col class="ion-col-2">
-        <div class="TeamsText"> {{view.poitns}} </div>
-      </ion-col>
-    </ion-row>
+    <ion-grid class="ion-card">
+      <ion-row class="groups">
+        <ion-col>المجموعة ز</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let itemg of itemsG | async" class="teams">
+        <ion-col><img width="20px" src="../../assets/img/teamsicon/{{itemg.logo}}.png" /></ion-col>
+        <ion-col>{{itemg.team}}</ion-col>
+        <ion-col>{{itemg.points}}</ion-col>
+      </ion-row>
+    </ion-grid>
 
-  </ion-grid>
+    <ion-grid class="ion-card">
+      <ion-row class="groups">
+        <ion-col>المجموعة ح</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let itemh of itemsH | async" class="teams">
+        <ion-col><img width="20px" src="../../assets/img/teamsicon/{{itemh.logo}}.png" /></ion-col>
+        <ion-col>{{itemh.team}}</ion-col>
+        <ion-col>{{itemh.points}}</ion-col>
+      </ion-row>
+    </ion-grid>
 
+  </div>
+  
 </ion-content>

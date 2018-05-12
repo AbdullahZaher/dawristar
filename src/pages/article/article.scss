@@ -23,7 +23,6 @@ page-article {
   h2 {
     direction: rtl;
     font-family: sukar-Bold;
-
   }
 
   p {
@@ -32,7 +31,11 @@ page-article {
     padding-top: 7px;
   }
 
-  .square {
-    font-size: 5px;
+  .time {
+    font-size: 0.800em;
+    padding-right: 0.600em
+  }
+  .writer{
+    font-size: 1.1em;
   }
 }

@@ -19,7 +19,7 @@ import { TodayPage } from '../pages/today/today';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = HomePage
 
   pages: Array<{title: string, component: any}>;
 
@@ -34,7 +34,7 @@ export class MyApp {
       { title: ' مقالات ', component: ArticlePage },
       { title: ' جداول الترتيب ', component: TablesPage },
       { title: ' هاشتاق ', component: TrendsPage },
-      { title: ' صور وفيديو ', component: MediaPage },
+      { title: 'ميديا ', component: MediaPage },
       { title: ' دوري ستار ', component: AboutUsPage }
     ];
 

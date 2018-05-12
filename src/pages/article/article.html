@@ -10,7 +10,9 @@
     <ion-item class="ion-item" *ngFor="let item of items | async">
       <img [src]="item.img" (click)="showTopicInfo(item)" width="70px" height="60px" item-start>
       <h2 text-wrap>{{item.title}}</h2>
-      <p>{{ item.author }} &nbsp;	&nbsp; {{item.date | date: 'dd/MM/yyyy'}}</p>
+      <p>
+        <span class="writer">{{ item.author }}</span> <span class="time"> {{ item.date | amLocale:'ar-sa' | amTimeAgo }}</span>
+      </p>
     </ion-item>
   </ion-list>
 

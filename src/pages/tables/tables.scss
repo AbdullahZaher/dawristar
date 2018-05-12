@@ -1,60 +1,39 @@
 page-tables {
   .ion-content {
     background-color: color($colors, body);
+    direction: rtl;
   }
   .icon {
     color: color($colors, dark);
   }
-
-  .ion-input-select,
-  select {
-    margin: 0 auto;
-    -webkit-appearance:none;
-    background-repeat: no-repeat;
-    background: color($colors, dark);
-    border-right: none;
-    border-left: none;
-    border-top: none;
-    border-bottom: thin solid color($colors, dark);
-    font-weight:300;
-    display:inline;
-    vertical-align:middle;
-    color:color($colors, danger);
-    padding: 16px 20px;
-    overflow:hidden;
-    box-sizing:border-box;
+ 
+  .ion-card {
+    display: inline-block;
+    height: 160px;
+    width: 49%!important;
   }
 
-  .ion-input-select {
-    width:100%;
-    font-size:1.500rem;
-    text-indent:20px;
-    padding: 16px 20px;
-    direction: rtl;
-    font-family: sukar-Regular;
+  .groups {
+    background: color($colors, wc2018);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #333333, color($colors, wc2018));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #333333, color($colors, wc2018)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: color($colors, light);
+    padding: 3px;
+    border-radius: 15px;
+    margin-bottom: 3px;
+    margin-top: 6px;
   }
 
-  select::-ms-expand {
-      display: none;
-  }
-
-  :focus {
-    outline:none;
-  }
-
-  ion-row {
+  .teams {
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 15px;
+    margin-top: 1px;
     direction: rtl;
   }
-  .ion-col-1 {
-    background-color:  color($colors, danger);
-    border: 1px solid  color($colors, dark);
-  }
-  .ion-col-2 {
-    background-color:  color($colors, secondary);
-    border: 1px solid  color($colors, dark);
-  }
 
-  .TableText {
+  .TeamsText {
     position: relative;
     direction: rtl;
     margin: 0 auto;
@@ -66,15 +45,16 @@ page-tables {
     padding-right: 2px;
   }
 
-  .TeamsText {
-    position: relative;
+  h4{
     direction: rtl;
-    margin: 0 auto;
-    padding: 2px;
-    text-align: center;
-    font-family: sukar-Regular;
-    font-weight: bold;
-    color: color($colors, dark);
-    padding-right: 2px;
+  }
+
+  .name {
+    position: absolute;
+  }
+
+  .name h2 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: color($colors, wc2018);
   }
 }

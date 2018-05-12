@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar color="primary">
     <button ion-button right menuToggle><ion-icon name="menu"></ion-icon></button>
-    <ion-title>صور وفيديو</ion-title>
+    <ion-title>ميديا</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -9,8 +9,12 @@
 <ion-content class="ion-content">
 
     <ion-card *ngFor="let media of medias">
-      <img class="img" [src]="media.img"/>
-      <div class="card-title">{{media.title}}</div>
-    </ion-card>
+        <img class="img" [src]="media.img"/>
+        <ion-card-content>
+          <ion-card-title text-wrap text-right class="imgtitle">
+              {{media.title}}
+          </ion-card-title>
+        </ion-card-content>
+      </ion-card>
 
 </ion-content>
